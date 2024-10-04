@@ -13,9 +13,7 @@ const items = [
             stars: 4.7,
             count: 1400,
         },
-        
     },
-    
     {
         id:'002',
         image:'2.jpg',
@@ -99,6 +97,8 @@ const items = [
         original_price: 1599,
         current_price: 639,
         discount_percentage: 60,
+        return_period: 14,
+        delivery_date:'16 sep 2024',
         rating: {
             stars: 4.2,
             count: 388,

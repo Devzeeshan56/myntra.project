@@ -13,12 +13,12 @@ function displayBagSummary() {
   let totalItem = bagItemObjects.length;
   let totalMRP = 0;
   let totalDiscount = 0;
-
+  console.log(totalItem,"totalItem")
   bagItemObjects.forEach(bagItem => {
     totalMRP += bagItem.original_price;
     totalDiscount += bagItem.original_price - bagItem.current_price;
   });
-
+  
   let finalPayment = totalMRP - totalDiscount + CONVENIENCE_FEES;
   
 
@@ -77,12 +77,13 @@ function removeFromBag(itemId) {
   displayBagIcon();
   displayBagItems();
   displayBagSummary();
+
 }
 
 function generateItemHTML(item) {
   return `<div class="bag-item-container">
     <div class="item-left-part">
-      <img class="bag-item-img" src="../${item.image}">
+      <img class="bag-item-img" src="/assets/images/${item.image}">
     </div>
     <div class="item-right-part">
       <div class="company">${item.company}</div>
